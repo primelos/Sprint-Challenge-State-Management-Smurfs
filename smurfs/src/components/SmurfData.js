@@ -2,12 +2,19 @@ import React from 'react';
 
 
 
-const SmurfData = (props) => {
-    console.log(`SmurfData`, props)
+export const SmurfData = ({smurfs}) => {
+    // console.log(`SmurfData`, smurfs)
     return (
         <div>
-           <p>{props.blue.name}</p>
+            {smurfs.map(blue => {
+                const {id, name, aga, height} = blue
+                return(
+                    <div>
+                        {name}    
+                    </div>
+                )
+            })}
+          
         </div>
     )
 }
-export default SmurfData

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 
 import Smurfs from "./Smurfs";
-import SmurfData from "./SmurfData";
+import { SmurfData } from './SmurfData'
 
 import { connect } from 'react-redux'
 import { getData } from '../actions'
@@ -17,7 +17,7 @@ class App extends Component {
 
 
   render() {
-    if (props.isLoading){
+    if (this.props.isLoading){
       return <h3>Waiting.........Data is Loading...../\/\/\/\/\/\/\/\/\/\/\/\</h3>
   } 
     return (
@@ -27,7 +27,7 @@ class App extends Component {
         <div>Start inside of your `src/index.js` file!</div>
         <div>Have fun!</div>
         <Smurfs />
-        <SmurfData smurfs={this.props.smurfs} />
+        <SmurfData smurfs={this.props.smurfData} />
       </div>
     );
   }
