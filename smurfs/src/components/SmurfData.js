@@ -7,10 +7,12 @@ export const SmurfData = ({smurfs}) => {
     return (
         <div>
             {smurfs.map(blue => {
-                const {id, name, aga, height} = blue
+                const {id, name, age, height} = blue
                 return(
                     <div>
-                        {name}    
+                        <h3>Name: {name}</h3>
+                        <p>Age: {age}</p>  
+                        <p>Height: {height}</p>  
                     </div>
                 )
             })}
