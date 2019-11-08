@@ -22,4 +22,5 @@ export const getData = () => (dispatch) => {
         axios.post('http://localhost:3333/smurfs', newSmurfs)
         .then(res => dispatch({ type: SEND_SUCCESS, payload: res.data }))
         .catch(error => dispatch({ type: SEND_FAILED, payload: error}))
+        
     }
